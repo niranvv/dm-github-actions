@@ -2,6 +2,10 @@ name: My Node Workflow
 
 on: [push]
 
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     say-hello:
         runs-on: ubuntu-latest
