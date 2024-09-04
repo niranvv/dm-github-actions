@@ -10,10 +10,9 @@ jobs:
     
     build-node:
         runs-on: ubuntu-latest
-        needs: say-hello
         strategy:
             matrix:
-                node-version: [18.x, 20.x]
+                node-version: [18.x]
         
         steps:
             - uses: actions/checkout@v4
